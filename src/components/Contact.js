@@ -10,7 +10,8 @@ export default function Contact (){
     
 function handleSubmit(e){
     e.preventDefault();
-    alert(`Thanks for your message ${name}!`);
+    alert(`Thanks for your message, We will back to you soon!`);
+    window.location.reload();
 }
 
     return(
@@ -26,7 +27,7 @@ function handleSubmit(e){
             <h2 className ="text-decoration-underline text-black" > 
             Contact Us 
             </h2>
-            <form className="container bg-white mt-4 w-100 text-center rounded">
+            <form className="container bg-white mt-4 w-100 text-center rounded" onSubmit={handleSubmit}>
             
             <input 
             type="text" placeholder="Enter your Full Name" 
@@ -35,7 +36,7 @@ function handleSubmit(e){
             onChange={setName} />
 
             <input 
-            type="text" placeholder="Enter your Email" 
+            type="email" placeholder="Enter your Email" 
             className="w-75 mb-4 border rounded border-secondary p-2" 
             required
             onChange={setEmail}
@@ -53,7 +54,6 @@ function handleSubmit(e){
             <button 
             type="submit"
             className="btn w-75 mb-3" style={{backgroundColor:'#FF9900', color:'white'}}
-            onSubmit={handleSubmit}
             >
                 Submit
             </button>
