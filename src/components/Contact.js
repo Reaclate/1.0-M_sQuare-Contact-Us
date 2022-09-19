@@ -8,6 +8,11 @@ export default function Contact (){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     
+function handleSubmit(e){
+    e.preventDefault();
+    alert(`Thanks for your message ${name}!`);
+}
+
     return(
         <>
         <div className="container bg-white mt-5 rounded text-center">
@@ -23,20 +28,32 @@ export default function Contact (){
             </h2>
             <form className="container bg-white mt-4 w-100 text-center rounded">
             
-            <input type="text" placeholder="Enter your Full Name" 
-            className="w-75 my-4 border rounded border-secondary p-2" onChange={setName} />
+            <input 
+            type="text" placeholder="Enter your Full Name" 
+            className="w-75 my-4 border rounded border-secondary p-2" 
+            required
+            onChange={setName} />
 
-            <input type="text" placeholder="Enter your Email" 
-            className="w-75 mb-4 border rounded border-secondary p-2" onChange={setEmail} />
+            <input 
+            type="text" placeholder="Enter your Email" 
+            className="w-75 mb-4 border rounded border-secondary p-2" 
+            required
+            onChange={setEmail}
+            />
 
-            <textarea type="text" placeholder="Message" rows={5} cols={50} 
+            <textarea 
+            type="text" placeholder="Message" rows={5} cols={50} 
             className="textarea w-75 mb-3 border rounded border-secondary p-2 mw-100 mh-25 m "
+            required
             onChange={setMessage}
             >
             </textarea>
           
 
-            <button type="submit" className="btn w-75 mb-3" style={{backgroundColor:'#FF9900', color:'white'}}>
+            <button 
+            type="submit"
+            className="btn w-75 mb-3" style={{backgroundColor:'#FF9900', color:'white'}}>
+            onSubmit={handleSubmit} 
                 Submit
             </button>
             </form>
