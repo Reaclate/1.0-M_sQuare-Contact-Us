@@ -52,8 +52,9 @@ function handleSubmit(e){
 
             <button 
             type="submit"
-            className="btn w-75 mb-3" style={{backgroundColor:'#FF9900', color:'white'}}>
-            onSubmit={handleSubmit} 
+            className="btn w-75 mb-3" style={{backgroundColor:'#FF9900', color:'white'}}
+            onSubmit={handleSubmit}
+            >
                 Submit
             </button>
             </form>
