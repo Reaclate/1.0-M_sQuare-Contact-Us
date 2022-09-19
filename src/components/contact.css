@@ -1,0 +1,13 @@
+.textarea{
+    resize: none;
+}
+.illus-img{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .illus-img{
+        width: 50%;
+        height: 100%;
+    }
+}
