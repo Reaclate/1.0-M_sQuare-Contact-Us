@@ -61,6 +61,12 @@ function handleSubmit(e){
         </div>
 
         </div>
+        <div className="row mt-5">
+        <p>
+            Designed By <a href="https://t.me/uixnature">Uix Nature</a> &
+            Developed By <a href="https://github.com/Reaclate">Reactlate</a>
+        </p>
+        </div>
         </div>
         </>
     )
